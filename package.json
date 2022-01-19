@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt3": "latest",
+    "sass": "^1.49.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0"
+  }
+}
