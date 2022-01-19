@@ -5,7 +5,7 @@ import { GetCategoryBySlug } from "~~/graphql/queries";
 const route = useRoute();
 const slug = route.params.slug;
 
-const { data } = await useAsyncData(`category-${slug}`, () =>
+const { data } = await useLazyAsyncData(`category-${slug}`, () =>
   gqlClient.request(GetCategoryBySlug, { slug })
 );
 

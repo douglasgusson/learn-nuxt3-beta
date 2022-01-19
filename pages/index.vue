@@ -2,7 +2,7 @@
 import gqlClient from "~~/graphql/client";
 import { GetRecipes } from "~~/graphql/queries";
 
-const { data } = await useAsyncData("recipes", () =>
+const { data } = await useLazyAsyncData("recipes", () =>
   gqlClient.request(GetRecipes)
 );
 

@@ -4,7 +4,7 @@ import { GetCategoriesMenu } from "~~/graphql/queries";
 
 const isActiveMenu = ref(false);
 
-const { data } = await useAsyncData("categories-menu", () =>
+const { data } = await useLazyAsyncData("categories-menu", () =>
   gqlClient.request(GetCategoriesMenu)
 );
 </script>

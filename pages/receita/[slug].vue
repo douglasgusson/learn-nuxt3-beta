@@ -5,7 +5,7 @@ import { GetRecipeBySlug } from "~~/graphql/queries";
 const route = useRoute();
 const slug = route.params.slug;
 
-const { data } = await useAsyncData(`recipe-${slug}`, () =>
+const { data } = await useLazyAsyncData(`recipe-${slug}`, () =>
   gqlClient.request(GetRecipeBySlug, { slug })
 );
 
